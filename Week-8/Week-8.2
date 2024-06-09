@@ -1,0 +1,51 @@
+Problem Statement:
+
+Give a dictionary with value lists, sort the keys by summation of values in value list.
+
+ Input : test_dict = {‘Gfg’ : [6, 7, 4], ‘best’ : [7, 6, 5]}
+
+Output : {‘Gfg’: 17, ‘best’: 18}
+
+Explanation : Sorted by sum, and replaced.
+
+ Input : test_dict = {‘Gfg’ : [8,8], ‘best’ : [5,5]}
+
+Output : {‘best’: 10, ‘Gfg’: 16}
+
+Explanation : Sorted by sum, and replaced.
+
+ Sample Input:
+
+2
+
+Gfg 6 7 4
+
+Best 7 6 5
+
+Sample Output
+
+Gfg 17
+
+Best 18
+
+ 
+
+
+
+Code:
+
+n = int(input())
+L = []
+for _ in range(n):
+    l = input().split()
+    key = l[0]
+    values = list(map(int, l[1:]))
+    sumi = sum(values)
+    L.append((key, sumi))
+
+# Sort the list of tuples based on the sum
+L.sort(key=lambda x: x[1])
+
+# Print the sorted result
+for key, sumi in L:
+    print(key, sumi)
