@@ -1,0 +1,50 @@
+Problem Statement:
+In the game of Scrabble™, each letter has points associated with it. The total score of a word is the sum of the scores of its letters. More common letters are worth fewer points while less common letters are worth more points. The points associated with each letter are shown below:
+
+Points Letters
+
+1 A, E, I, L, N, O, R, S, T and U
+
+2 D and G
+
+3 B, C, M and P
+
+4 F, H, V, W and Y
+
+5 K
+
+8 J and X
+
+10 Q and Z
+
+Write a program that computes and displays the Scrabble™ score for a word. Create a dictionary that maps from letters to point values. Then use the dictionary to compute the score.
+
+A Scrabble™ board includes some squares that multiply the value of a letter or the value of an entire word. We will ignore these squares in this exercise.
+
+Sample Input
+
+REC
+
+Sample Output
+
+REC is worth 5 points.
+
+
+
+Code:
+d={}
+d[1]="AEILNORSTU"
+d[2]="DG"
+d[3]="BCMP"
+d[4]="FHVWY"
+d[5]="K"
+d[8]="JX"
+d[10]="QZ"
+s=input()
+score=0
+for l in s:
+    for x in d:
+        if(l in d[x]):
+            score+=x
+            break
+print(f'{s} is worth {score} points.')
