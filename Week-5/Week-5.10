@@ -1,0 +1,17 @@
+Problem Statement:
+Write a program to check if two strings are balanced. For example, strings s1 and s2 are balanced if all the characters in the s1 are present in s2. The character’s position doesn’t matter. If balanced display as "true" ,otherwise "false".
+
+
+
+Code:
+
+s1=input()
+s2=input()
+flag=True
+for x in s1:
+    if x in s2:
+        continue
+    else:
+        flag=not(flag)
+        break
+print(flag)
