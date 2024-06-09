@@ -1,0 +1,38 @@
+Problem Statement:
+Robert  is having 2 strings consist of uppercase & lowercase english letters. Now he want to compare those two strings lexicographically. The letters' case does not matter, that is an uppercase letter is considered equivalent to the corresponding lowercase letter.
+
+
+Input
+The first line contains T. Then T test cases follow.
+
+Each test case contains a two lines contains a string. The strings' lengths range from 1 to 100 inclusive. It is guaranteed that the strings are of the same length and also consist of uppercase and lowercase Latin letters.
+
+Output
+If the first string is less than the second one, print "-1".
+If the second string is less than the first one, print "1".
+If the strings are equal, print "0".
+Note that the letters' case is not taken into consideration when the strings are compared.
+
+Constraints
+                      1≤T≤50
+                      String length≤100
+
+Code:
+
+T = int(input())
+
+while T:
+    L1 = input().lower()
+    L2 = input().lower()
+    
+    for i in range(len(L1)):
+        if L1[i] < L2[i]:
+            print("-1")
+            break
+        elif L1[i] > L2[i]:
+            print("1")
+            break
+    else:
+        print("0")
+    
+    T -= 1
