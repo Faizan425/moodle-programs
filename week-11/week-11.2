@@ -1,0 +1,22 @@
+problem
+Write a Python program that performs division and modulo operations on two numbers provided by the user. Handle division by zero and non-numeric inputs.
+
+Input Format:
+
+Two lines of input, each containing a number.
+
+Output Format:
+
+Print the result of division and modulo operation, or an error message if an exception occurs.
+
+
+code
+try:
+    a=int(input())
+    b=int(input())
+    print(f"Division result: {a/b}")
+    print(f"Modulo result: {a%b}")
+except ZeroDivisionError:
+    print("Error: Cannot divide or modulo by zero.")
+except ValueError:
+    print("Error: Non-numeric input provided.")
