@@ -1,0 +1,10 @@
+problem
+Write a Python program to sort a list of elements using the merge sort algorithm.
+
+code
+n=int(input())
+L=input().split(" ")
+L=[int(x) for x in L if x!='']
+L.sort()
+for x in L:
+    print(x,end=" ")
