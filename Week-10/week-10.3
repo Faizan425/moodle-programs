@@ -1,0 +1,44 @@
+problem
+Given an list, find peak element in it. A peak element is an element that is greater than its neighbors.
+
+An element a[i] is a peak element if
+
+A[i-1] <= A[i] >=a[i+1] for middle elements. [0<i<n-1]
+
+A[i-1] <= A[i] for last element [i=n-1]
+
+A[i]>=A[i+1] for first element [i=0]
+
+Input Format
+
+The first line contains a single integer n , the length of A .
+The second line contains n space-separated integers,A[i].
+
+Output Format
+
+Print peak numbers separated by space.
+
+Sample Input
+
+5
+
+8 9 10 2 6
+
+Sample Output
+
+10 6
+
+code
+n=int(input())
+L=input().split(" ")
+L=[int(x) for x in L if x!='']
+peak=[]
+for x in range(n):
+    if(x==0 and(L[x+1]<L[x])):
+        peak.append(L[x])
+    elif(x==n-1 and(L[x]>L[x-1])):
+        peak.append(L[x])
+    elif(L[x]>L[x-1] and L[x]>L[x+1]):
+        peak.append(L[x])
+for x in peak:
+    print(x,end=" ")
