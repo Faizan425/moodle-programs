@@ -1,0 +1,22 @@
+problem
+Write a Python program for binary search.
+
+code
+L=input().split(",")
+L=[int(x) for x in L]
+k=int(input())
+L.sort()
+left=0
+right=len(L)-1
+flag=False
+while(left<=right):
+    mid=left+(right-left)//2
+    if(L[mid]==k):
+        flag=True
+        break
+    elif(L[mid]>k):
+        right=mid-1
+    elif(L[mid]<k):
+        left=mid+1
+print(flag)
+        
