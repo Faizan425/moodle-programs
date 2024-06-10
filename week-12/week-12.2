@@ -1,0 +1,17 @@
+problem
+Given an integer n, print true if it is a power of four. Otherwise, print false.
+
+An integer n is a power of four, if there exists an integer x such that n == 4x.
+
+code
+n=int(input())
+flag=True
+k=1
+while True:
+    if(n==k):
+        break
+    elif(k>n):
+        flag=False
+        break
+    k*=4
+print(flag)
