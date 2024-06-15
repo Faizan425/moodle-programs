@@ -1,0 +1,12 @@
+Problem Statement:
+Write a program to find the count of unique digits in N.
+
+Code:
+a=input()
+counter=0
+for x in range(len(a)):
+    if(a[x] in a[x+1:]):
+        continue
+    else:
+        counter+=1
+print(counter)
