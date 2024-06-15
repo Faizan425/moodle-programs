@@ -1,0 +1,14 @@
+Problem Statement:
+Determine the factors of the number and return the pth element of the list.
+
+Code:
+n=int(input())
+p=int(input())
+pth=[]
+for i in range(1,n+1):
+    if(n%1==0):
+        pth.append(i)
+if(p>len(pth)):
+    print(0)
+else:
+    print(pth[p-1])
