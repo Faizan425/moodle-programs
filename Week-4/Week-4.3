@@ -1,0 +1,14 @@
+Problem Statement:
+Check whetehr the given number is a disarium number or not
+
+Code:
+a=input()
+position=1
+result=0
+for x in a:
+    result+=int(x)**position
+    position+=1
+if(result==int(a)):
+    print("Yes")
+else:
+    print("No")
