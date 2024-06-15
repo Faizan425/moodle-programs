@@ -1,0 +1,25 @@
+Problem Statement:
+Given an array of numbers find the index of the pivot.
+
+Code:
+
+n=int(input())
+t=n
+L=[]
+while(t):
+    L.append(int(input())
+    t-=1
+sum1=0
+sum2=0
+for i in range(0,n):
+    if(i==0 or i==n-1):
+        continue
+    for j in L[0:i]:
+        sum1+=j
+    for k in L[i+1:]:
+        sum2+=k
+    if(sum1==sum2):
+        print(i)
+        break
+    sum1=0
+    sum2=0
